@@ -1,0 +1,43 @@
+{% extends "cricketmain/base.html" %}
+{% load static %}
+{% block page_content %}
+<div style="text-align: center;">
+    <h2> Match Fixtures</h2>
+</div>
+<div class="container table-responsive">
+    <table class="table">
+        <tr>
+            <th style="width: 33%;">Match</th>
+            <th style="width: 33%;">Pair</th>
+            <th style="width: 33%;">Winner</th>
+        </tr>
+        {% for row in match_fixture %}
+        <tr>
+            <td>{{ row.matchnumber }}</td>
+            <td>{{ row.teamone }} vs {{ row.teamtwo }}</td>
+            <td>{{ row.winner }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div style="text-align: center;">
+    <h2>Points Table</h2>
+</div>
+<div class="container table-responsive">
+    <table class="table">
+        <tr>
+            <th style="width: 33%;">Rank</th>
+            <th style="width: 33%;">Team Name</th>
+            <th style="width: 33%;">Points</th>
+        </tr>
+        {% for row in points %}
+        <tr>
+            <td>{{ row.rank }}</td>
+            <td>{{ row.team_name }}</td>
+            <td>{{ row.points }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

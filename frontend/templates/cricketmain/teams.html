@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "cricketmain/base.html" %}
+{% load static %}
+{% block page_content %}
+<h1 style="text-align: center;">Cricket Application</h1>
+    <div class="row">
+        {% for team in teams %}
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src={{team.logo_uri}} height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ team.name }}</h5>
+                        <!-- <p class="card-text">{{ team.club_state }}</p> -->
+                        <a href="{% url 'frontend:detailpage' team.id %}"
+                            class="btn btn-primary">
+                                Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div style="text-align: center;">
+        <a href="{% url 'frontend:match_fixture' %}"
+                            class="btn btn-primary">
+                                Match Fixtures
+                        </a>
+    </div>
+{% endblock %}

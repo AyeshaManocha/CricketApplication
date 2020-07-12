@@ -1,0 +1,19 @@
+{% extends "cricketmain/base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div class="row">
+    {% for data in teamdetail %}
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src={{data.image_uri}} height="300px">
+            <div class="card-body">
+                <h5 class="card-title">{{ data.first_name}} {{data.last_name}}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+    
+
