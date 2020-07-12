@@ -1,6 +1,8 @@
 # CricketApplication
 Cricketmain app contains the logic of creating REST APIs in order to expose the teams in this application and players in each team.
+
 Frontend app consumes RESTAPIs and renders the details in HTML templates
+
 testing folder contains unit testcases to test REST APIs
 
 Database used: PostgreSQL
