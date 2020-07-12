@@ -10,7 +10,8 @@ def teamPage(request):
 
 def teamDetailPage(request, team_id):
     url = requests.get('http://127.0.0.1:8000/backend/team/{team_id}/'.format(team_id=team_id), None)
-    return render(request, 'cricketmain/teamdetail.html',{'teamdetail': json.loads(url.text)})
+    res = json.loads(url.text)
+    return render(request, 'cricketmain/teamdetail.html',{'teamdetail': res['players'], 'team_name': res['team_name']})
 
 def matchFixtureView(request):
     url = requests.get('http://127.0.0.1:8000/backend/match_fixture/', None)

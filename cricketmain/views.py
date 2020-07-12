@@ -15,8 +15,16 @@ class TeamView(APIView):
 
 class TeamDetailView(APIView):
     def get(self, request, team_id, format = None):
+        player_data = []
+        response = {}
         players = Player.objects.select_related('team').filter(team__id = team_id)
-        serializer = TeamDetailSerializer(players, many = True)
+        for player in players:
+            team_name = player.team.name
+            player_data.append({'first_name': player.first_name, 'last_name': player.last_name,
+            'image_uri': player.image_uri})
+        response['players'] = player_data
+        response['team_name'] = team_name
+        serializer = TeamDetailSerializer(response)
         return Response(serializer.data)
 
 class MatchFixture(APIView):

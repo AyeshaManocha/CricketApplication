@@ -25,8 +25,8 @@ class Command(BaseCommand):
 
         update_create.update_create(Player,{"first_name":"Hardik","last_name":"Pandya", "image_uri":'https://upload.wikimedia.org/wikipedia/commons/5/5b/Hardik_Pandya_%28cropped%29.jpg',"jersey_number": 21,"country": "India","history":"All rounder","team_id": teamtwo.id},
         {"first_name":"Hardik","last_name":"Pandya", "image_uri":'https://upload.wikimedia.org/wikipedia/commons/5/5b/Hardik_Pandya_%28cropped%29.jpg',"jersey_number": 21,"country": "India","history":"All rounder","team_id": teamtwo.id},{})
-        update_create.update_create(Player,{"first_name":"Ravindra","last_name":"Jadeja", "image_uri":'https://www.cricbuzz.com/stats/img/faceImages/587.jpg',"jersey_number":27,"country": "India","history":"All rounder","team_id": teamtwo.id},
-        {"first_name":"Ravindra","last_name":"Jadeja", "image_uri":'https://www.cricbuzz.com/stats/img/faceImages/587.jpg',"jersey_number":27,"country": "India","history":"All rounder","team_id": teamtwo.id},{})
+        update_create.update_create(Player,{"first_name":"Ravindra","last_name":"Jadeja", "image_uri":'https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/jadejaheadshot-min.jpg',"jersey_number":27,"country": "India","history":"All rounder","team_id": teamtwo.id},
+        {"first_name":"Ravindra","last_name":"Jadeja", "image_uri":'https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/jadejaheadshot-min.jpg',"jersey_number":27,"country": "India","history":"All rounder","team_id": teamtwo.id},{})
         update_create.update_create(Player,{"first_name":"Jasprit","last_name":"Bumrah", "image_uri":'https://m.cricbuzz.com/a/img/v1/192x192/i1/c170685/jasprit-bumrah.jpg',"jersey_number":37,"country": "India","history":"Bowler","team_id": teamtwo.id},
         {"first_name":"Jasprit","last_name":"Bumrah", "image_uri":'https://m.cricbuzz.com/a/img/v1/192x192/i1/c170685/jasprit-bumrah.jpg',"jersey_number":37,"country": "India","history":"Bowler","team_id": teamtwo.id},{})
 
